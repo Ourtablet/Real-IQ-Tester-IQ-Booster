@@ -1,0 +1,21 @@
+{
+  "name": "Real IQ Tester & Booster",
+  "short_name": "IQ Tester",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3f69b6",
+  "description": "Age-adjusted IQ test with boosters and history",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23FFD166'/%3E%3Ccircle cx='32' cy='26' r='12' fill='%23F4A261'/%3E%3Ccircle cx='26' cy='24' r='2.5' fill='%232B2D42'/%3E%3Ccircle cx='38' cy='24' r='2.5' fill='%232B2D42'/%3E%3Cellipse cx='32' cy='33' rx='4.5' ry='3' fill='%232B2D42'/%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23FFD166'/%3E%3Ccircle cx='32' cy='26' r='12' fill='%23F4A261'/%3E%3Ccircle cx='26' cy='24' r='2.5' fill='%232B2D42'/%3E%3Ccircle cx='38' cy='24' r='2.5' fill='%232B2D42'/%3E%3Cellipse cx='32' cy='33' rx='4.5' ry='3' fill='%232B2D42'/%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
