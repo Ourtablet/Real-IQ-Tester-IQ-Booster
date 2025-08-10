@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IQ Tester PWA</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#ffcc00" />
+</head>
+<body>
+  <header>
+    <h1>IQ Tester</h1>
+    <nav>
+      <button id="homeBtn">Home</button>
+      <button id="boosterBtn">Booster</button>
+      <button id="historyBtn">Results History</button>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+    <!-- Home Screen -->
+    <section id="homeScreen" class="active">
+      <h2>Welcome to IQ Tester</h2>
+      <p>Select a level to begin the IQ test:</p>
+      <div class="level-buttons">
+        <button class="level" data-level="1">Level 1</button>
+        <button class="level" data-level="2">Level 2</button>
+        <button class="level" data-level="3">Level 3</button>
+        <button class="level" data-level="4">Level 4</button>
+        <button class="level" data-level="5">Level 5</button>
+      </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quizScreen">
+      <h2 id="quizTitle">IQ Test</h2>
+      <div id="questionContainer"></div>
+      <div id="quizControls">
+        <button id="nextBtn">Next</button>
+      </div>
+      <div id="timer">Time left: <span id="timeLeft">30</span>s</div>
+    </section>
+
+    <!-- Booster Section -->
+    <section id="boosterScreen">
+      <h2>Booster Games</h2>
+      <p>Improve your IQ by playing boosters!</p>
+      <div class="booster-options">
+        <button id="memoryGameBtn">Memory Match</button>
+        <button id="mathGameBtn">Matrix Math</button>
+        <button id="imageTestBtn">Image Test</button>
+      </div>
+    </section>
+
+    <!-- History Section -->
+    <section id="historyScreen">
+      <h2>Results History</h2>
+      <table id="historyTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Level</th>
+            <th>IQ Score</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="exportCsvBtn">Export CSV</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 IQ Tester</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(reg => console.log('Service Worker registered:', reg))
+        .catch(err => console.error('SW registration failed:', err));
+    }
+  </script>
+</body>
+</html>
