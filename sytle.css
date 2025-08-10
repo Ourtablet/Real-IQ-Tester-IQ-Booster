@@ -1,0 +1,55 @@
+:root{
+  --p1:#3f69b6; --p2:#112240; --muted:#6b6b6b; --bg:linear-gradient(135deg,#1a2a6c,#b21f1f,#1a2a6c);
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial}
+body{background:var(--bg);display:flex;align-items:center;justify-content:center;padding:18px}
+.container{width:100%;max-width:980px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.app-header{padding:14px;background:linear-gradient(90deg,var(--p1),var(--p2));color:#fff}
+.brand{display:flex;gap:10px;align-items:center}
+.app-title{margin:0;font-weight:700}
+.app-subtitle{opacity:.95;margin:0;font-size:.9rem}
+.content{padding:18px}
+.screen{display:none}
+.screen.active{display:block}
+.lead{color:var(--muted);text-align:center;margin:10px 0}
+.card-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin:14px 0}
+.card{width:260px;background:#fff;border-radius:10px;padding:14px;border:1px solid #e6e9ef;cursor:pointer;display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.card i{font-size:28px;color:var(--p1)}
+.card strong{font-size:1.05rem;color:var(--p2)}
+.card span{font-size:.92rem;color:var(--muted)}
+.muted{color:var(--muted);text-align:center;margin-top:8px}
+.form{max-width:420px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.form label{font-weight:600}
+.form input[type=number],input[type=text]{padding:10px;border-radius:8px;border:1px solid #dfe5f2;font-size:1rem}
+.actions{display:flex;gap:10px;justify-content:center;margin-top:12px}
+.btn{padding:10px 16px;border-radius:999px;border:none;cursor:pointer;background:#e9eefb;color:var(--p2);font-weight:600}
+.btn.primary{background:linear-gradient(90deg,var(--p1),var(--p2));color:#fff}
+.progress-wrap{background:#f4f6fb;border-radius:10px;height:10px;margin:10px 0}
+.progress{height:100%;width:0;background:linear-gradient(90deg,var(--p1),var(--p2));border-radius:10px;transition:width .35s}
+.timer{font-weight:700;text-align:center;margin:6px 0;color:#e74c3c}
+.question-card{background:#fff;padding:12px;border-radius:10px;border:1px solid #eef2fb;box-shadow:0 6px 18px rgba(15,30,60,.04)}
+.question-text{font-size:1.05rem;color:var(--p2);margin-bottom:10px}
+.answers{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.answers button{padding:12px;border-radius:8px;border:1px solid #e6e9ef;background:#fbfdff;cursor:pointer}
+.answers button[aria-pressed="true"]{background:linear-gradient(90deg,var(--p1),var(--p2));color:#fff;border-color:var(--p1)}
+.result-card{display:flex;flex-direction:column;align-items:center;gap:8px;padding:12px}
+.score{font-size:3rem;color:var(--p1);font-weight:800}
+.result-grid{display:flex;gap:18px;margin-top:10px}
+.level-grid{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:12px 0}
+.level-grid .level-btn{width:60px;height:60px;border-radius:8px;border:1px solid #e6e9ef;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;cursor:pointer}
+.mem-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:520px;margin:10px auto}
+.mem-grid .cell{background:#e9efff;padding:14px;border-radius:8px;text-align:center;cursor:pointer;user-select:none}
+.mem-grid .cell.active{background:var(--p1);color:#fff;transform:scale(1.03)}
+.mem-stats{text-align:center;margin-top:8px;color:var(--muted)}
+.math-problem{font-size:2rem;text-align:center;margin:12px 0;color:var(--p2)}
+.math-stats{text-align:center;margin-top:10px;color:var(--muted)}
+.footer{padding:12px;text-align:center;color:#fff;background:linear-gradient(90deg,var(--p1),var(--p2))}
+
+/* Modal */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.5);z-index:9999}
+.modal[hidden]{display:none}
+.modal-card{background:#fff;padding:16px;border-radius:10px;min-width:320px;max-width:720px}
+.history-list{max-height:360px;overflow:auto;padding:8px}
+.history-item{padding:8px;border-bottom:1px solid #eef2fb}
+@media(max-width:720px){.card{width:90%}.answers{grid-template-columns:1fr}}
